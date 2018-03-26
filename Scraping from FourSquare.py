@@ -28,7 +28,7 @@ def get_url():
             print('I am sorry, but I can not identify which option you chose. Please try again: ')
     return url
 
-# Gathering the data from of the specific url and making it useable
+# Gathering the data from the specific url and making it useable
 r = get(get_url())
 soup = BeautifulSoup(r.content, 'html5lib')
 g_data = soup.find_all('div', {'class': 'infoCol'} )
